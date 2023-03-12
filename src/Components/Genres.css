@@ -1,0 +1,32 @@
+.Genres{
+    height: 250px;
+    overflow: auto;
+}
+
+
+
+.Genres::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+  
+  
+.Genres::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+  }
+   
+  
+  
+.Genres::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+
+/* Media Querries */
+
+@media(max-width:900px){
+  .Genres{
+    height: 100px;
+  }
+}

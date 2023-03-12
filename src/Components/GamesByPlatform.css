@@ -1,0 +1,19 @@
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.top h1{
+    font-weight: 300;
+}
+
+.games-genre h2{
+    font-weight: 300;
+    text-align: center;
+}
+
+.games-genre img{
+    width: 450px;
+    height: 300px;
+}

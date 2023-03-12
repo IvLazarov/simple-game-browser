@@ -1,0 +1,56 @@
+.Home{
+  display: flex;
+  flex-wrap: wrap;
+}
+.searchStyle{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.searchStyle input{
+    font-family: 'Tilt Warp';
+    font-size: 22px;
+    width: 30%;
+    height: 20px;
+    border-radius: 25px;
+    background-color: whitesmoke;
+}
+
+.searchStyle input[type='text']{
+  padding: 1%;  
+}
+
+.categoryStyle{
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+
+.categoryStyle h2{
+  font-weight: 300;
+}
+
+.allgames{
+  width: 80%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 1%;
+}
+
+
+/* Media Querries */
+@media(max-width:900px){
+  .categoryStyle, .allgames{
+    width: 100%;
+  }
+}
+

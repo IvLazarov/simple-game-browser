@@ -1,0 +1,59 @@
+.GameDesc div h1, h2, h4{
+    font-weight: 300;
+}
+
+.GameDesc div h4{
+    color: #767F94;
+}
+
+
+
+.headings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.headings h1{
+    font-size: 35px;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.images img{
+    width: 500px;
+    height: 300px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.description{
+    padding: 1%;
+    text-align: justify;
+}
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.details div{
+    font-size: 20px;
+}
+/* Media Querries */
+
+@media (max-width:800px){
+    .headings, .details{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details div{
+        text-align: center;
+    }
+}
