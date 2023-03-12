@@ -1,3 +1,7 @@
+# Simple Game Browser Application
+This is a simple game browser application that lets the user search games by title, genre and platform.
+View the app on: https://simple-game-browser.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
