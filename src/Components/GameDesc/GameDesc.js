@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import GameStores from "./GameStores";
+import GameStores from "../GameStores/GameStores";
 import "./GameDesc.css";
 
 const GameDesc = () => {

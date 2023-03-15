@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 import { Routes, Route } from "react-router-dom";
-import GameDesc from "./Components/GameDesc";
-import GenreView from "./Components/GenreView";
-import GamesByPlatform from "./Components/GamesByPlatform";
+import GameDesc from "./Components/GameDesc/GameDesc";
+import GenreView from "./Components/GenreView/GenreView";
+import GamesByPlatform from "./Components/GamesByPlatform/GamesByPlatform";
 import "./App.css";
 
 function App() {

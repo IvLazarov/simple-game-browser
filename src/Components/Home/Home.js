@@ -1,7 +1,7 @@
 import React from "react";
-import GameView from "./GameView";
-import Genres from "./Genres";
-import GamePlatforms from "./GamePlatforms";
+import GameView from "../GameView/GameView";
+import Genres from "../Genres/Genres";
+import GamePlatforms from "../GamePlatforms/GamePlatforms";
 import "./Home.css";
 
 const Home = ({ input, handleInput, handleKeyDown, results }) => {

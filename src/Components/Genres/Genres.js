@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GenreCard from "./GenreCard";
+import GenreCard from "../GenreCard/GenreCard";
 import "./Genres.css";
 
 const Genres = () => {
