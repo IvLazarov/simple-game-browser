@@ -10,7 +10,7 @@ const GenreView = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/genres/${genreId}?key=fe583b24bc4c4cf3ad182e6900138e89`
+      `https://api.rawg.io/api/genres/${genreId}?key=4bc0eac8b3e74a84a29fa89b0d4181a8`
     )
       .then((response) => response.json())
       .then((data) => {
