@@ -22,7 +22,7 @@ const GenreView = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=fe583b24bc4c4cf3ad182e6900138e89&genres=${genreId}`
+      `https://api.rawg.io/api/games?key=4bc0eac8b3e74a84a29fa89b0d4181a8&genres=${genreId}`
     )
       .then((respone) => respone.json())
       .then((data) => {

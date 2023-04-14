@@ -6,7 +6,7 @@ const Genres = () => {
   const [genre, setGenre] = useState([]);
 
   useEffect(() => {
-    fetch(`https://api.rawg.io/api/genres?key=fe583b24bc4c4cf3ad182e6900138e89`)
+    fetch(`https://api.rawg.io/api/genres?key=4bc0eac8b3e74a84a29fa89b0d4181a8`)
       .then((response) => response.json())
       .then((data) => {
         setGenre(data.results);

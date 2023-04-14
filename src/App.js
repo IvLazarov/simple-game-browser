@@ -18,7 +18,7 @@ function App() {
     if (event.key === "Enter") {
       setInput(event.target.value);
       fetch(
-        `https://api.rawg.io/api/games?key=fe583b24bc4c4cf3ad182e6900138e89&search=${input}`
+        `https://api.rawg.io/api/games?key=4bc0eac8b3e74a84a29fa89b0d4181a8&search=${input}`
       )
         .then((response) => response.json())
         .then((data) => {
