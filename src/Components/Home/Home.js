@@ -2,9 +2,10 @@ import React from "react";
 import GameView from "../GameView/GameView";
 import Genres from "../Genres/Genres";
 import GamePlatforms from "../GamePlatforms/GamePlatforms";
+import { Oval } from "react-loader-spinner";
 import "./Home.css";
 
-const Home = ({ input, handleInput, handleKeyDown, results }) => {
+const Home = ({ input, handleInput, handleKeyDown, results, searchTerm, loading }) => {
   return (
     <div className="Home">
       <div className="searchStyle">
@@ -22,7 +23,15 @@ const Home = ({ input, handleInput, handleKeyDown, results }) => {
         <GamePlatforms />
       </div>
       <div className="allgames">
-        {results.map((result) => {
+        {
+          searchTerm && results.length === 0 && !loading && <h3>Game not found!</h3>
+        }
+        { loading ? 
+        <div className="spinner">
+          <Oval color="whitesmoke" 
+          secondaryColor="white"
+          />
+        </div> : results.map((result) => {
           return (
             <div key={result.id}>
               <GameView

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import GameStores from "../GameStores/GameStores";
+import { Oval } from "react-loader-spinner";
 import "./GameDesc.css";
 
 const GameDesc = () => {
   const gameId = useParams().id;
+  const [gameData, setGameData]=useState({});
   const [gameName, setGameName] = useState("");
   const [gameGenres, setGameGenres] = useState([]);
   const [gameImg1, setGameImg1] = useState("");
@@ -30,11 +32,19 @@ const GameDesc = () => {
         setGamePubs(data.publishers);
         setGamePlats(data.parent_platforms);
         setGameRat(data.rating);
+        setGameData(data)
       });
   }, [gameId]);
 
   return (
-    <div className="GameDesc">
+    <>
+    {
+      Object.keys(gameData).length === 0 ? 
+      <div className="loader">
+        < Oval color="whitesmoke" secondaryColor="white" />
+      </div>
+      :
+      <div className="GameDesc">
       <div className="headings">
         {gameRat === 0 ? <div></div> : <h2>Game Rating {gameRat}</h2>}
         <h1>{gameName}</h1>
@@ -100,7 +110,11 @@ const GameDesc = () => {
         <GameStores gameId={gameId} />
       </div>
     </div>
+    }
+    
+    </>
   );
+  
 };
 
 export default GameDesc;

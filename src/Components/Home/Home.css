@@ -46,6 +46,24 @@
   padding-left: 1%;
 }
 
+.allgames h3{
+  font-size: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Media Querries */
 @media(max-width:900px){

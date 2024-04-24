@@ -9,6 +9,8 @@ import "./App.css";
 function App() {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(false);
 
   const handleInput = (event) => {
     setInput(event.target.value);
@@ -17,13 +19,19 @@ function App() {
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setInput(event.target.value);
+      setLoading(true);
       fetch(
         `https://api.rawg.io/api/games?key=4bc0eac8b3e74a84a29fa89b0d4181a8&search=${input}`
       )
         .then((response) => response.json())
         .then((data) => {
           setResults(data.results);
+          setLoading(false);
         });
+      
+      if(input.length > 0){
+        setSearchTerm(true);
+      }
     }
   };
 
@@ -38,6 +46,8 @@ function App() {
               input={input}
               handleInput={handleInput}
               handleKeyDown={handleKeyDown}
+              searchTerm={searchTerm}
+              loading={loading}
             />
           }
         />

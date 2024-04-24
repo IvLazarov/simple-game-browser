@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./GamesByPlatform.css";
+import { Oval } from 'react-loader-spinner';
 
 const GamesByPlatform = () => {
   const platformId = useParams().id;
@@ -34,7 +35,15 @@ const GamesByPlatform = () => {
   }, [platformId]);
 
   return (
-    <div>
+    <>
+    {
+        platformGames.length === 0 ? 
+        <div className="loader">
+          <Oval color="whitesmoke" secondaryColor="white" />
+        </div>
+        :
+        <div>
+      
       <div className="top">
         <h2>Games on {platformNames[platformId - 1]}</h2>
         <Link to="/">
@@ -48,13 +57,16 @@ const GamesByPlatform = () => {
             <div key={platformGame.id}>
               <Link to={`/${platformGame.slug}`}>
                 <h2>{platformGame.name}</h2>
-                <img src={platformGame.background_image} alt="game_image" />
+                <img src={platformGame.background_image} alt="game_image" loading="lazy" />
               </Link>
             </div>
           );
         })}
       </div>
     </div>
+      }
+    </>
+    
   );
 };
 

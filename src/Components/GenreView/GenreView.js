@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./GenreView.css";
+import { Oval } from 'react-loader-spinner';
 
 const GenreView = () => {
   const genreId = useParams().id;
@@ -14,7 +15,6 @@ const GenreView = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setGenre(data.name);
         setDescription(data.description);
       });
@@ -31,7 +31,14 @@ const GenreView = () => {
   }, [genreId]);
 
   return (
-    <div>
+    <>
+    {
+      genreGames.length === 0 ?
+      <div className="loader">
+        < Oval color="whitesmoke" secondaryColor="white" />
+      </div>
+      :
+<div>
       <div className="top">
         <h2>{genre}</h2>
         <Link to="/">
@@ -48,13 +55,17 @@ const GenreView = () => {
             <div key={genreGame.id}>
               <Link to={`/${genreGame.slug}`}>
                 <h3>{genreGame.name}</h3>
-                <img src={genreGame.background_image} alt="game-gen-img" />
+                <img src={genreGame.background_image} alt="game-gen-img" loading="lazy"/>
               </Link>
             </div>
           );
         })}
       </div>
     </div>
+    }
+    
+    </>
+    
   );
 };
 

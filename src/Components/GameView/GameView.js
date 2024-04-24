@@ -8,7 +8,7 @@ const GameView = ({ name, image, slug }) => {
       <Link to={slug}>
         <h2>{name}</h2>
       </Link>
-      <img src={image} alt="game-img" />
+      <img src={image} alt="game-img" loading="lazy" />
     </div>
   );
 };
